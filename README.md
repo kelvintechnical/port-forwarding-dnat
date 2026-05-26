@@ -1,11 +1,11 @@
 # Lab: Setup Port Forwarding (DNAT) — Rich `forward-port` Rules
 
-**Series:** linux-ops-mastery — RHCSA Firewall
-**Subjects covered:** Destination NAT via **`firewall-cmd` rich rules**, `forward-port port=`, `protocol=`, `to-port=`, optional `to-addr=`, **`--add-forward-port`** equivalence, **`--permanent`**, **`--reload`**, verifying with `--list-forward-ports` and `--list-rich-rules`
-**Career arcs covered:** RHCSA (EX200 — publish internal app on alternate port), RHCE (Ansible `firewalld` forward-port parameters), SRE (temporary traffic steering during blue/green cuts), DevOps (sidecar ingress without changing container listen), AI/MLOps (expose notebook portal 8008 behind corporate standard 80)
-**Prerequisite:** Labs on **services**, **rich rules** basics, and awareness of **`ip_forward`** when forwarding through the host
-**Time Estimate:** 30 to 45 minutes
-**Difficulty arc:** Task 1 inventory · 2–3 runtime DNAT 80→8008 · 4 permanent + reload · 5 edge: list forward ports vs rich view · 6 capstone + remove forwarding cleanup
+- **Series:** linux-ops-mastery — RHCSA Firewall
+- **Subjects covered:** Destination NAT via **`firewall-cmd` rich rules**, `forward-port port=`, `protocol=`, `to-port=`, optional `to-addr=`, **`--add-forward-port`** equivalence, **`--permanent`**, **`--reload`**, verifying with `--list-forward-ports` and `--list-rich-rules`
+- **Career arcs covered:** RHCSA (EX200 — publish internal app on alternate port), RHCE (Ansible `firewalld` forward-port parameters), SRE (temporary traffic steering during blue/green cuts), DevOps (sidecar ingress without changing container listen), AI/MLOps (expose notebook portal 8008 behind corporate standard 80)
+- **Prerequisite:** Labs on **services**, **rich rules** basics, and awareness of **`ip_forward`** when forwarding through the host
+- **Time Estimate:** 30 to 45 minutes
+- **Difficulty arc:** Task 1 inventory · 2–3 runtime DNAT 80→8008 · 4 permanent + reload · 5 edge: list forward ports vs rich view · 6 capstone + remove forwarding cleanup
 
 ---
 
@@ -148,10 +148,6 @@ sudo firewall-cmd --permanent --list-rich-rules
 
 ```text
 running
-
-
-
-
 
 ```
 
@@ -373,7 +369,6 @@ sudo firewall-cmd --list-rich-rules
 ```text
 success
 success
-
 
 ```
 
